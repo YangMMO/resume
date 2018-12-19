@@ -240,6 +240,11 @@ body{
     box-shadow: 0 0 2px rgba(0,0,0,0.5) inset;
     box-sizing: border-box;
 }
+
+.description {
+    width: 320px;
+    margin: 20px auto 0;
+}
 .ft-label .lb-list{
     display: flex;
     flex-wrap: wrap;
@@ -281,7 +286,7 @@ body{
 }
 .hd-title{
     position: relative;
-    width: 18%;
+    width: 30%;
     padding-left: 5px;
     padding-right: 5px;
     padding-bottom: 10px;
@@ -438,20 +443,41 @@ body{
 .skill-flex .bd-item .bd-length::before{
     background-color: rgba(204,204,204,1);
 }
-.skill-flex .bd-item .bd-length::after{
+.skill-flex .bd-item:nth-child(1) .bd-length::after{
     z-index: 2;
-    width: 30%;
+    width: 80%;
     background-image: linear-gradient(to right, rgba(20,129,216,1), rgba(0,171,240,1));
 }
-/*@keyframes length*/
-@keyframes length{
-    form{width: 0;}
-    33%{width: 10%;}
-    66%{width: 32%;}
-    88%{width: 29%;}
+
+.skill-flex .bd-item:nth-child(2) .bd-length::after{
+    z-index: 2;
+    width: 90%;
+    background-image: linear-gradient(to right, rgba(20,129,216,1), rgba(0,171,240,1));
 }
-.skill-flex .bd-item:hover .bd-length::after{
-    animation: length .6s 1 ease;
+
+
+/*@keyframes length*/
+@keyframes length1{
+    form{width: 0;}
+    33%{width: 35%;}
+    66%{width: 85%;}
+    88%{width: 80%;}
+}
+
+@keyframes length2{
+    form{width: 0;}
+    33%{width: 40%;}
+    66%{width: 95%;}
+    88%{width: 90%;}
+}
+
+.skill-flex .bd-item:nth-child(1):hover .bd-length::after{
+    animation: length1 .6s 1 ease;
+    animation-fill-mode: forwards;
+}
+
+.skill-flex .bd-item:nth-child(2):hover .bd-length::after {
+    animation: length2 .6s 1 ease;
     animation-fill-mode: forwards;
 }
 
