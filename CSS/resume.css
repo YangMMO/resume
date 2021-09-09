@@ -185,7 +185,7 @@ body{
 .hd-pic{
     display: flex;
     justify-content: center;
-    background: url(../image/image.png) no-repeat center;
+    background: url(../image/img.png) no-repeat center;
     background-size: cover;
     background-color: #fff;
 }
@@ -198,8 +198,9 @@ body{
     animation: rotate 100ms linear infinite;
 }
 .hd-animation:hover .hd-pic{
-    background: url(../image/image.gif) no-repeat center;
+    background: url(../image/img.png) no-repeat center;
     background-size: cover;
+    background-color: #fff;
 }
 
 /*--------------*/
@@ -538,3 +539,22 @@ body{
         position: absolute;
     }
 }*/
+
+.copyright {
+    width: 100%;
+    padding: 5px 0;
+    background-color: rgba(0,0,0,0.2);
+    position: fixed;
+    bottom: 0;
+}
+.copyright p{
+    width: 100%;
+    text-align: center;
+}
+.copyright p span{
+    color: #fff;
+    margin-right: 20px;
+}
+.copyright p a{
+    color: #fff;
+}
